@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/w3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--fonts: UnifrakturMaguntia and WindSong -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=WindSong:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- sortable table-->
+    <script
+      type="text/JavaScript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
+    ></script>
+    <!-- end: add jquery script links to support for sortable table -->
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      #mySidebar a:hover {
+        background-color: #ffa201 !important;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div
+        class="w3-bar w3-black w3-padding w3-card"
+        style="letter-spacing: 2px"
+      >
+        <a href="#home" class="w3-bar-item w3-button brand-orange site-logo"
+          >Ennio Morricone</a
+        >
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small small-nav">
+          <a href="#TheArtist" class="w3-bar-item w3-button">The Artist</a>
+          <a href="#Gallery" class="w3-bar-item w3-button">Gallery</a>
+          <a href="#Album" class="w3-bar-item w3-button">Album</a>
+          <a href="#Music List" class="w3-bar-item w3-button">Music List</a>
+          <a href="#Video" class="w3-bar-item w3-button">Video</a>
+          <a href="#" class="w3-bar-item w3-button"
+            ><i class="fa fa-search"></i
+          ></a>
+          <a href="#" class="w3-bar-item w3-button"
+            ><i class="fa fa-shopping-basket"></i
+          ></a>
+        </div>
+
+        <!-- Hamburger menu icon for mobile -->
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right"
+          onclick="w3_open()"
+          title="Open Sidebar Menu"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+    <!--white divider-->
+    <div class="divider-white"></div>
+
+    <!--side bar-->
+    <nav
+      class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+      style="display: none"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-large w3-padding-16"
+        >Close</a
+      >
+      <a href="#TheArtist" onclick="w3_close()" class="w3-bar-item w3-button"
+        >The Artist</a
+      >
+      <a href="#Gallery" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Gallery</a
+      >
+      <a href="#Album" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Album</a
+      >
+      <a href="#Music List" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Music List</a
+      >
+      <a href="#Video" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Video</a
+      >
+    </nav>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-wide"
+      style="max-width: 1500px"
+      id="home"
+    >
+      <img
+        class="w3-image hero-img"
+        src="/img/ennio-home.jpg"
+        width="1300"
+        height="800"
+        alt="Ennio Morricone"
+      />
+      <div class="w3-display-middle w3-center hero-text">
+        <h1
+          style="
+            font-family: 'WindSong', cursive;
+            background: linear-gradient(
+              45deg,
+              #ffe65b,
+              #ffa201,
+              #9e6200,
+              #ffe65b,
+              #ffa201,
+              #d6a90d
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 120px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            line-height: 1.2;
+            letter-spacing: 2px;
+            padding-right: 16px;
+            margin: 0;
+          "
+        >
+          Ennio<br />Morricone
+        </h1>
+        <div>
+          <a href="#TheArtist" class="explore-button">Explore</a>
+        </div>
+      </div>
+    </header>
+    <div>
+      <div style="height: 40px"></div>
+
+      <div
+        style="
+          height: 1px;
+          background-color: white;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        "
+      ></div>
+    </div>
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width: 1100px">
+      <!-- About The Artist Section -->
+      <div id="TheArtist" class="w3-row-padding w3-padding-32">
+        <!-- The Artist title -->
+        <div class="w3-col s12">
+          <h1 class="section-title" style="padding-left: 10px">The Artist</h1>
+        </div>
+
+        <!-- content below：image+text -->
+        <div class="w3-row">
+          <!-- left image-->
+          <div class="w3-col l6 m12" style="padding: 20px; padding-top: 0">
+            <img
+              src="./img/reflection-pic.jpg"
+              class="w3-image"
+              alt="Morricone"
+              style="width: 100%; margin-bottom: 40px"
+            />
+          </div>
+
+          <!-- right-->
+          <div
+            class="w3-col l6 m12"
+            style="padding-right: 20px; padding-left: 20px; margin-bottom: 40px"
+          >
+            <p class="right-text">
+              Ennio Morricone was born in Rome on 10 November 1928. His long
+              artistic career includes a wide range of composition genres, from
+              absolute concert music to applied music, working as orchestrator,
+              conductor and composer for theatre, radio and cinema. In 1946,
+              Ennio received his trumpet diploma and in 1954 he received his
+              diploma in Composition at the Conservatorio di Santa Cecilia under
+              the guidance of Goffredo Petrassi. He wrote his first concert
+              works at the end of the 1950s, then worked as arranger for RAI
+              (the Italian broadcasting company) and RCA-Italy. He started his
+              career as a film music composer in 1961 with the film Il
+              Federale directed by Luciano Salce. World fame followed through
+              the Sergio Leone westerns: A Fistful of Dollars(1964), For a Few
+              Dollars More (1965), The Good, The Bad and The Ugly (1966), Once
+              Upon a Time in The West(1968) and A Fistful of Dynamite (1971).
+            </p>
+            <!-- Explore buttom-->
+            <div style="position: relative; margin: 0.5vw 0; text-align: right">
+              <a href="https://www.enniomorricone.org/the-man/" class="explore-button">Explore</a>
+            </div>
+            <!-- right image -->
+            <div style="text-align: right; margin: 0.5vw 0">
+              <img
+                src="./img/piano.jpg"
+                style="width: 100%; height: auto"
+                alt="playing the piano"
+              />
+            </div>
+            <p class="right-text">
+              During his long career, Ennio Morricone has also received many
+              awards. As well as the Golden Lion and the honorary Oscar he was
+              awarded in 2003, he has been presented with eight Nastri
+              D’argento, five BAFTAs, five Oscar nominations, seven David Di
+              Donatellos, three Golden Globes, one Grammy Award and one European
+              Film Award. In 2009, the then President of the French Republic,
+              Nicolas Sarkozy, also signed a decree appointing Morricone to the
+              rank of Knight in the Order of the Legion of Honor.
+            </p>
+            <!-- Explore buttom-->
+            <div style="text-align: right">
+              <a href="https://www.enniomorricone.org/events/" class="explore-button">Explore</a>
+            </div>
+          </div>
+          <div 
+            style="height: 1px; background-color: white; width: 100%; margin: 20px 0;">
+          </div>
+
+        </div>
+
+        <!-- About Album Section-->
+        <div id="Album"></div>
+        <div class="w3-row-padding w3-padding-64" style="position: relative">
+          <img
+            src="./img/Hiroshi Sugimoto.jpg"
+            style="width: 100%; object-fit: cover; height: 60vh"
+            alt="theater"
+          />
+          <div class="subtitle">
+            <h1 class="subtitle">Representative Album</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Album list Section -->
+      <div class="w3-row w3-padding-64" id="seasoning">
+        <div class="w3-padding-large">
+          <!-- Carousel thumbnails: Horizontal scroll -->
+          <div style="overflow-x: auto; white-space: nowrap; padding: 10px 0">
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="/img/The Hateful Eight.jpg"
+              style="
+                width: 200px;
+                height: auto;
+                display: inline-block;
+                margin-right: 10px;
+                cursor: pointer;
+              "
+              onclick="currentDiv(1)"
+            />
+
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="/img/Cinema Paradiso Neon Sign Art Print.jpg"
+              style="
+                width: 200px;
+                height: auto;
+                display: inline-block;
+                margin-right: 10px;
+                cursor: pointer;
+              "
+              onclick="currentDiv(2)"
+            />
+
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="/img/1900.jpg"
+              style="
+                width: 200px;
+                height: auto;
+                display: inline-block;
+                margin-right: 10px;
+                cursor: pointer;
+              "
+              onclick="currentDiv(3)"
+            />
+
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="/img/The Thing.jpg"
+              style="
+                width: 200px;
+                height: auto;
+                display: inline-block;
+                margin-right: 10px;
+                cursor: pointer;
+              "
+              onclick="currentDiv(4)"
+            />
+
+            <img
+              class="demo w3-opacity w3-hover-opacity-off"
+              src="./img/ The Good, The Bad And The Ugly.jpg"
+              style="
+                width: 200px;
+                height: auto;
+                display: inline-block;
+                margin-right: 10px;
+                cursor: pointer;
+              "
+              onclick="currentDiv(5)"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Scrollable content area -->
+      <div class="w3-row" style="margin-top: 40px">
+        <div
+          class="w3-col s12 w3-padding"
+          style="display: flex; justify-content: center"
+        >
+          <div
+            style="
+              background-color: black;
+              padding: 16px;
+              width: 70%;
+              height: 4.8em;
+              overflow-y: auto;
+              color: #ffa201;
+              font-size: 16px;
+              line-height: 1.6;
+              text-align: center;
+              border: 1px solid #ffa201;
+              border-radius: 8px;
+            "
+          >
+            <p>
+              Throughout his near 50-year career as a film composer, his
+              signature ideas have included simple ideas (easy to hum) in
+              complex arrangements, unusual instrumentation, concrete sounds,
+              the use of the human voice as part of the orchestra, long
+              silences, musical gags, and single notes sustained forever.
+              <br />
+              Giuseppe Tornatore, of Cinema Paradiso fame, has said of him: “He
+              is not just a great film composer, he is a great composer.”
+            </p>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Music List Section -->
+
+        <div class="w3-container w3-padding-64" id="Music List">
+          <div class="w3-padding-large">
+            <!--Music list title-->
+            <h1 class="section-title" style="padding-left: 10px">Music list</h1>
+            <table id="myTable" class="w3-table-all">
+              <thead>
+                <tr>
+                  <th class="orange-cell orange-header">Movie Title</th>
+                  <th class="orange-cell orange-header">Genre</th>
+                  <th class="orange-cell orange-header">Year</th>
+                  <th class="orange-cell orange-header">Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="orange-cell">The Good, the Bad and the Ugly</td>
+                  <td class="orange-cell">Spaghetti Western</td>
+                  <td class="orange-cell">1966</td>
+                  <td class="orange-cell">161 minutes</td>
+                </tr>
+                <tr>
+                  <td class="orange-cell">Once Upon a Time in the West</td>
+                  <td class="orange-cell">Spaghetti Western</td>
+                  <td class="orange-cell">1968</td>
+                  <td class="orange-cell">165 minutes</td>
+                </tr>
+                <tr>
+                  <td class="orange-cell">The Mission</td>
+                  <td class="orange-cell">Historical Drama</td>
+                  <td class="orange-cell">1986</td>
+                  <td class="orange-cell">155 minutes</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="margin-top: 60px; padding: 0">
+              <img
+                src="/img/film.jpg"
+                alt="film"
+                style="width: 100%; display: block"
+              />
+            </div>
+
+            <!-- Gallery Section -->
+            <div class="w3-container w3-padding-64" id="Gallery">
+              <h1 class="section-title" style="padding-left: 10px">Behind Scenes Gallery</h1>
+              <div class="custom-grid">
+                <!-- Block 1-quote -->
+                <div class="grid-item small" 
+                      style.display='block'>
+                  <p style="color: #ffa201; font-size: 24px;padding-top: 40px;padding-left:14px;padding-right:14px;">
+                    “Every note I write is a piece of my soul, a part of my being.”
+                  </p>
+                  <p style="text-align: right; font-size: 16px;padding-right:20px;">&mdash; Ennio Morricone</p>
+                </div>
+                <!-- Block 2-image -->
+                <div class="grid-item small" 
+                    onclick="document.getElementById('modal01').style.display='block'">
+                    <img src="/img/composing.jpg" alt="Composing"
+                    style="cursor: zoom-in" 
+                    class="w3-hover-shadow"/>
+                </div>
+                 
+
+
+                <!-- Block 3-Tall image -->
+                <div class="grid-item tall" onclick="document.getElementById('modal03').style.display='block'">
+                  <img src="./img/Ennio back.jpg" alt="Backstage" class="img" />
+                </div>
+                 <!-- Block 4-image -->
+                <div class="grid-item small" style="aspect-ratio: 3 / 3.85;onclick="document.getElementById('modal04').style.display='block'">
+                  <img src="/img/oscar.jpg" alt="Oscar" />
+                </div>
+                <!-- Block 5-quote -->
+                <div class="grid-item small" style="aspect-ratio: 3 / 3.85; onclick="document.getElementById('modal01').style.display='block'">
+                  <p style="color: #ffa201; font-size: 24px;padding-top: 40px;padding-left:14px;padding-right:14px;">
+                    "For his magnificent and multifaceted contributions to the art of film music."
+                  </p>
+                  <p style="text-align: right; font-size: 16px;padding-right:20px;">&mdash; Academy Honorary Award</p>
+                </div>
+                <!-- Block 6-Tall image -->
+                <div class="grid-item tall" onclick="document.getElementById('modal03').style.display='block'">
+                  <img src="./img/Morricone-call.jpg" alt="Ennio" class="img" />
+                </div>
+                <!-- Block 7-image -->
+                <div class="grid-item small" style="aspect-ratio: 3 / 3.85;onclick="document.getElementById('modal02').style.display='block'">
+                  <img src="/img/Ennio playing the piano.jpg" alt="Playing the piano"/>
+                </div>
+                <!-- Block 8-quote -->
+                <div class="grid-item small" style="aspect-ratio: 3 / 3.85; onclick="document.getElementById('modal01').style.display='block'">
+                  <p style="color: #ffa201; font-size: 24px;padding-top: 40px;padding-left:14px;padding-right:14px;">
+                    "The power of music lies in its ability to express emotions that words alone cannot encompass.""
+                  </p>
+                  <p style="text-align: right; font-size: 16px;padding-right:20px;">&mdash; Ennio Morricone</p>
+                </div>
+                <!-- Block 9-image -->
+                <div class="grid-item wide"  style="aspect-ratio: 6/ 3.9; onclick="document.getElementById('modal04').style.display='block'">
+                  <img src="./img/conducting.jpg" alt="Conducting" style="margin-bottom: 8px;" />
+                  </p>
+                  <p style="text-align: right; font-size: 12px;">&mdash; Academy Honorary Award</p>
+                </div>
+
+          <!-- add the first modal, set id="modal01"-->
+          <!-- each lightbox content (modal) should have a unique modal id -->
+          <div
+            id="modal01"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <!-- add close button-->
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <!-- add modal background image -->
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">Alice Waters - 1</h4>
+              <img src="./img/chef-alice-waters.png" style="width: 100%" />
+            </div>
+          </div>
+
+          <!-- add the second modal, set id="modal02"-->
+          <!-- each lightbox content (modal) should have a unique modal id -->
+          <div
+            id="modal02"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <!-- add close button-->
+            <span
+              class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright"
+              style="cursor: pointer"
+              >&times;</span
+            >
+            <!-- add modal background image -->
+            <div class="w3-modal-content w3-animate-zoom">
+              <h4 class="w3-center">April Bloomfield</h4>
+              <img src="./img/chef-april-bloomfield.png" style="width: 100%" />
+            </div>
+          </div>
+
+          <!-- follow the samples above to continue adding modal for each thumbnail image -->
+          <!-- each lightbox content (modal) should have a unique modal id -->
+          <div
+            id="modal03"
+            class="w3-modal"
+            onclick="this.style.display='none'"
+          >
+            <!-- add code to add modal for each thumbnail image -->
+          </div>
+        </div>
+      </div>
+
+      <!-- End page content -->
+    </div>
+
+            
+
+            <!-- Video Section -->
+
+            <div class="w3-container w3-padding-64 section-title" id="Video">
+              <h1 class="section-title" style="padding-left: 20px">Video</h1>
+
+              <!-- Video1 -->
+              <div class="w3-row w3-margin-bottom">
+                <!-- left video -->
+                <div class="w3-col m6 s12">
+                  <iframe
+                    class="w3-image"
+                    width="100%"
+                    height="250"
+                    src="https://www.youtube.com/embed/Jjq6e1LJHxw"
+                    title="The Best of Ennio Morricone"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+
+                <!--right text -->
+                <div class="w3-col m6 s12 w3-padding-large">
+                  <h1 class="w3-text-orange">01</h1>
+                  <h3 class="w3-text-white">
+                    The Greatest Hits of Ennio Morricone
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Video2 -->
+              <div class="w3-row w3-margin-bottom">
+                <!-- left video -->
+                <div class="w3-col m6 s12">
+                  <iframe
+                    class="w3-image"
+                    width="100%"
+                    height="250"
+                    src="https://www.youtube.com/embed/xCoByvRZviw"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+
+                <!--right text -->
+                <div class="w3-col m6 s12 w3-padding-large">
+                  <h1 class="w3-text-orange">02</h1>
+                  <h3 class="w3-text-white">
+                    Ennio Morricone - Once Upon A Time In The West
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Video3 -->
+              <div class="w3-row w3-margin-bottom">
+                <!-- left video -->
+                <div class="w3-col m6 s12">
+                  <iframe
+                    class="w3-image"
+                    width="100%"
+                    height="250"
+                    src="https://www.youtube.com/embed/xCoByvRZviw"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+
+                <!--right text -->
+                <div class="w3-col m6 s12 w3-padding-large">
+                  <h1 class="w3-text-orange">03</h1>
+                  <h3 class="w3-text-white">
+                    Ennio Morricone - Once Upon A Time In The West
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Video4 -->
+              <div class="w3-row w3-margin-bottom">
+                <!-- left video -->
+                <div class="w3-col m6 s12">
+                  <iframe
+                    class="w3-image"
+                    width="100%"
+                    height="250"
+                    src="https://www.youtube.com/embed/xCoByvRZviw"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  >
+                  </iframe>
+                </div>
+
+                <!--right text -->
+                <div class="w3-col m6 s12 w3-padding-large">
+                  <h1 class="w3-text-orange">04</h1>
+                  <h3 class="w3-text-white">
+                    Ennio Morricone - Once Upon A Time In The West
+                  </h3>
+                </div>
+
+                <!-- End page content -->
+              </div>
+
+      <!-- Footer -->
+       <footer class="w3-center w3-padding-32" style="background-color: #000; color: white;">
+        <p style="background-color: #000; color: white;font-size: 12px;text-align: left; margin: 0 20px;">
+        Terms of Use and Privacy Policy <br />© 2025 Ennio Morricone All Rights Reserved</p>
+        </div>
+        <a
+          href="https://www.w3schools.com/w3css/default.asp"
+          title="W3.CSS"
+          target="_blank"
+          class="w3-hover-text-green"
+          ></a
+        >
+        </footer>
+
+              <script>
+                // Toggle between showing and hiding the sidebar when clicking the menu icon
+                var mySidebar = document.getElementById("mySidebar");
+
+                function w3_open() {
+                  if (mySidebar.style.display === "block") {
+                    mySidebar.style.display = "none";
+                  } else {
+                    mySidebar.style.display = "block";
+                  }
+                }
+
+                // Close the sidebar with the close button
+                function w3_close() {
+                  mySidebar.style.display = "none";
+                }
+                // sortable table begin
+      $(document).ready(function () {
+        $("table#myTable").tablesorter({
+          sortList: [
+            [2, 1],
+          ] /* 1st number - column to sort, 2nd number - asending (2) or descending order (1) */,
+          CssAsc: "tablesorter-headerAsc",
+          CssDesc: "tablesorter-headerDesc",
+        });
+      });
+      // sortable table end
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
