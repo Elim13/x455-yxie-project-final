@@ -188,7 +188,7 @@ html {
   overflow-x: hidden;
 }
 h1 {
-  font-size: 36px;
+  font-size: 40px;
 }
 h2 {
   font-size: 30px;
@@ -1858,13 +1858,6 @@ w3-hover-cobalt:hover {
 }
 
 /*table*/
-.tablesorter-headerAsc {
-  background-color: #ffcc99 !important;
-}
-
-.tablesorter-headerDesc {
-  background-color: #ff9966 !important;
-}
 
 .orange-cell {
   border: 2px solid #ffa201;
@@ -1882,4 +1875,21 @@ w3-hover-cobalt:hover {
   font-weight: bold;
   cursor: pointer;
   font-size: 18px;
+}
+.w3-orange,
+.w3-hover-orange:hover {
+  background-color: #ffa201 !important;
+  color: #000 !important;
+}
+.w3-sand,
+.w3-hover-sand:hover {
+  color: #000 !important;
+  background-color: #fdf5e6 !important;
+}
+.tablesorter-headerAsc {
+  background-color: #ffcc99 !important;
+}
+
+.tablesorter-headerDesc {
+  background-color: #ff9966 !important;
 }
