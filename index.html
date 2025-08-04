@@ -33,10 +33,13 @@
         background-color: black;
         color: white;
     }  
-        #mySidebar a:hover {
+      #mySidebar a:hover {
         background-color: #ffa201 !important;
         color: #000;
         }
+      .w3-modal {
+      background-color:rgba(255, 165, 0, 0.4); 
+    }  
         
     </style>
   </head>
@@ -340,9 +343,8 @@
 
         <!-- Music List Section -->
         <div class="w3-container w3-padding-64"id="Music-List"style="scroll-margin-top: -200px;">
-          <div class="w3-padding-large">
             <!--Music list title-->
-            <h1 class="section-title" style="padding-left: 10px; padding-top: 100px;">Music list</h1>
+            <h1 class="section-title" style="padding-top: 100px;">Music list</h1>
             <table id="myTable" class="w3-table-all">
               <thead>
                 <tr>
@@ -384,7 +386,7 @@
 
         <!-- Gallery Section -->
         <div class="w3-container w3-padding-64" id="Gallery">
-          <h1 class="section-title" style="padding-left: 10px;padding-top: 40px">Behind Scenes Gallery</h1>
+          <h1 class="section-title" style="padding-top: 40px">Behind Scenes Gallery</h1>
           <div class="custom-grid">
             <!-- Block 1-quote -->
             <div class="grid-item small" 
@@ -457,9 +459,9 @@
               style="cursor: pointer"
               >&times;</span
             >
-            <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-modal-content w3-animate-zoom"style="max-width: 60vw; margin: auto; background-color: black">
               <h4 class="w3-center" style="color: #ffa201;background-color: #000;">Morricone Writing a Score</h4>
-              <img src="/img/composing.jpg" style="width: 100%" />
+              <img src="/img/composing.jpg" style="width: 100%">
             </div>
           </div>
 
@@ -473,7 +475,7 @@
               style="cursor: pointer"
               >&times;</span
             >
-            <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-modal-content w3-animate-zoom"style="max-width: 40vw; margin: auto; background-color: black;">
               <h4 class="w3-center" style="color: #ffa201;background-color: #000;">Backstage</h4>
               <img src="/img/Ennio back.jpg" style="width: 100%" />
             </div>
@@ -489,7 +491,7 @@
               style="cursor: pointer"
               >&times;</span
             >
-            <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-modal-content w3-animate-zoom"style="max-width: 40vw; margin: auto; background-color: black">
               <h4 class="w3-center" style="color: #ffa201;background-color: #000;">Receiving the Academy Honorary Award</h4>
               <img src="/img/oscar.jpg" style="width: 100%" />
             </div>
@@ -505,7 +507,7 @@
               style="cursor: pointer"
               >&times;</span
             >
-            <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-modal-content w3-animate-zoom"style="max-width: 38vw; margin: auto; background-color: black">
               <h4 class="w3-center" style="color: #ffa201;background-color: #000;">Morricone Playing a Trumpet</h4>
               <img src="/img/Morricone-call.jpg" style="width: 100%" />
             </div>
@@ -521,8 +523,8 @@
               style="cursor: pointer"
               >&times;</span
             >
-            <div class="w3-modal-content w3-animate-zoom">
-              <h4 class="w3-center" style="color: #ffa201;background-color: #000;">Morricone Playing the Piano.jpg</h4>
+            <div class="w3-modal-content w3-animate-zoom"style="max-width:50vw; margin: auto; background-color: black">
+              <h4 class="w3-center" style="color: #ffa201;background-color: #000;">Morricone Playing the Piano</h4>
               <img src="/img/Ennio playing the piano.jpg" style="width: 100%" />
             </div>
           </div>
@@ -537,25 +539,22 @@
               style="cursor: pointer"
               >&times;</span
             >
-            <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-modal-content w3-animate-zoom"style="max-width: 60vw; margin: auto; background-color: black">
               <h4 class="w3-center" style="color: #ffa201;background-color: #000;">Morricone Conducting a Concert</h4>
               <img src="./img/conducting.jpg" style="width: 100%" />
             </div>
           </div>
        </div>   
     
-
-            
-
       <!-- Video Section -->
 
       <div class="w3-container w3-padding-64 section-title" id="Video">
-        <h1 class="section-title" style="padding-left: 20px">Video</h1>
+        <h1 class="section-title">Video</h1>
 
           <!-- Video1 -->
           <div class="w3-row w3-margin-bottom">
             <!-- left video -->
-            <div class="w3-col l6 m6 s12"style="padding-left: 30px">
+            <div class="w3-col l6 m6 s12"style="padding-left: 0">
               <iframe width="100%" height="300"
                 src="https://www.youtube.com/embed/4D5xuGOaCCk?si=7Ju6G6sSKpSiTo_H"
                 title="YouTube video player"
@@ -575,7 +574,7 @@
           <!-- Video2 -->
           <div class="w3-row w3-margin-bottom">
             <!-- left video -->
-            <div class="w3-col l6 m6 s12" style="padding-left: 30px">
+            <div class="w3-col l6 m6 s12" style="padding-left: 0">
               <iframe width="100%" height="300"
                 src="https://www.youtube.com/embed/ysw8VUFuTtU?si=E_D3o4QN8eoo2-ii"
                 title="YouTube video player"
@@ -595,7 +594,7 @@
           <!-- Video3 -->
           <div class="w3-row w3-margin-bottom">
             <!-- left video -->
-            <div class="w3-col l6 m6 s12" style="padding-left: 30px">
+            <div class="w3-col l6 m6 s12" style="padding-left: 0">
               <iframe width="100%" height="300"
                 src="https://www.youtube.com/embed/W-YD2Y8ojYE?si=KAXDXKf_B85l9voe"
                 title="YouTube video player"
@@ -617,7 +616,7 @@
           <!-- Video4 -->
           <div class="w3-row w3-margin-bottom">
             <!-- left video -->
-            <div class="w3-col l6 m6 s12" style="padding-left: 30px">
+            <div class="w3-col l6 m6 s12" style="padding-left: 0">
               <iframe width="100%" height="315"
                 src="https://www.youtube.com/embed/GwQ8iHX3dyU?si=aAr3quVkV5oQvpP0"
                 title="YouTube video player"
